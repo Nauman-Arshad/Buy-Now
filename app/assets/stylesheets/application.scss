@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Playfair+Display|Muli:300,400);
+body {
+  background-color: #fff;
+  font-family: 'Playfair Display', serif;
+}
+.navbar {
+  font-family: 'Muli', sans-serif;
+  text-transform: uppercase;
+}
+.navbar-default {
+
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(75, 101, 132);
+
+  .navbar-nav > li > a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+
+  .navbar-link {
+    color: #222;
+  }
+
+  .navbar-brand {
+    letter-spacing: 1.1px;
+  }
+
+}
+.dropdown-menu > li > a {
+  text-decoration: none;
+  color: #f7fbff;
+}
+.dropdown-menu{
+  background-color: rgb(75, 101, 132);
+}

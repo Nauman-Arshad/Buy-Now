@@ -11,29 +11,29 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-default navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><span class="text-info text-capitalize fst-italic">Shop Now</span></a>
+      <a class="navbar-brand" href="#"><span class="text-white text-capitalize fst-italic">Shop Now</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
+          <li class="btn "><%= link_to "Sign Up" , new_user_registration_path %> </li>
+          <% if user_signed_in? %>
+            <li class="btn"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+            <li class="btn"><%= link_to "Sign In", new_user_session_path %></li>
+          <% end %>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Privacy</a></li>
-              <li><a class="dropdown-item" href="#">Premium</a></li>
+              <li class="btn"><%=link_to "Privacy", new_user_registration_path %></li>
+              <li class="btn"><%=link_to "Premium", new_user_registration_path  %></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"><span class="text-info">Log Out</span></a></li>
+              <li class="btn"><%=link_to "Log Out", destroy_user_session_path %></li>
             </ul>
           </li>
         </ul>
