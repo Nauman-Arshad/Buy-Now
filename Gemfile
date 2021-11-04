@@ -5,6 +5,8 @@ ruby '3.0.1'
 gem 'bootstrap'
 gem 'simple_form'
 gem 'devise'
+gem 'bootstrap-sass-extras'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use postgresql as the database for Active Record

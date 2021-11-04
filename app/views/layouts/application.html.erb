@@ -2,47 +2,16 @@
 <html>
   <head>
     <title>Shop Now</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= viewport_meta_tag(:maximum_scale => "1.0") %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <nav class="navbar navbar-default navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><span class="text-white text-capitalize fst-italic">Shop Now</span></a>
-      <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon "></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-          <% if user_signed_in? %>
-          <li class="btn text-white">Home</li>
-          <li class="btn text-white">About</li>
-            <% else %>
-            <li class="btn "><%= link_to "Sign Up" , new_user_registration_path %> </li>
-            <li class="btn"><%= link_to "Sign In", new_user_session_path %></li>
-            <%end %>
-          <% if user_signed_in? %>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li class="btn"><%=link_to "Privacy", new_user_registration_path %></li>
-              <li class="btn"><%=link_to "Premium", new_user_registration_path  %></li>
-              <li><hr class="dropdown-divider"></li>
-              <li class="btn"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-            </ul>
-          </li>
-            <% end %>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <%= render 'layouts/navbar' %>
+  <%= bootstrap_flash %>
     <%= yield %>
   </body>
 </html>
