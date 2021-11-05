@@ -13,10 +13,31 @@
  *= require_tree .
  *= require_self
  */
-@import url(http://fonts.googleapis.com/css?family=Playfair+Display|Muli:300,400);
-body {
+@import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500);
+
+@mixin background-tile {
+  box-sizing: border-box;
   background-color: #fff;
-  font-family: 'Playfair Display', serif;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  padding: 1.5em 1.25em;
+}
+
+
+/* General styles */
+
+body {
+  background-color: #f5f5f5;
+  font-family: 'Lora', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+p.alert, p.notice {
+  margin: 0;
 }
 .navbar {
   font-family: 'Muli', sans-serif;
@@ -37,8 +58,12 @@ body {
     color: #222;
   }
 
-  .navbar-brand {
-    letter-spacing: 1.1px;
+  .navbar-brand  {
+    color: #ffffff;
+    letter-spacing: 1.4px;
+  }
+  .navbar-brand:hover{
+    color: white;
   }
 
 }
@@ -52,4 +77,52 @@ body {
 .navbar-toggler{
   background: white;
 
+}
+.show-img{
+  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.show-container{
+  background-color: #F7F7F7;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+.show-heading {
+  background-color: #F7F7F7;
+  color: gray;
+  padding: 10px;
+  border-left: 5px solid gray;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+  .product-desc{
+   padding: 10px;
+   letter-spacing: inherit;
+    font-family: "JetBrains Mono Light";
+    font-style: initial;
+    font-size: 17px;
+    word-spacing: 1px;
+    letter-spacing: 0.25px;
+  }
+}
+.product{
+    height: 350px;
+    width: 250px;
+    margin-bottom: 40px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  border-radius: 5px;
+  padding: 0.75em 0.75em;
+  //@include background-tile;
+}
+.show-btn-div {
+  margin-top: 20px;
+}
+
+.show-btn-div > li > a {
+  text-decoration: none;
+
+}
+.show-btn-div > li{
+  border: 0.5px solid gainsboro;
+}
+.show-btn-div > li:hover{
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }

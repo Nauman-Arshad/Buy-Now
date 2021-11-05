@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-3">
+    <div class="container show-img-div">
+    <% if @product.image.attached? %>
+      <%= image_tag @product.image,:class => "show-img", style:"width:255px; height:375px;" %>
+    <% end %>
+    </div>
+  </div>
+  <div class="col-md-5 offset-2">
+    <div class=" mt-5 show-container">
+    <h4 class="text-uppercase show-heading"><%= @product.name %></h4>
+    <p class="product-desc"><%= @product.description %></p>
+    </div>
+  </div>
+</div>
+<div>
+<ul  class="show-btn-div">
+  <li class="btn "><%= link_to 'Back', products_path %></li>
+  <li class="btn"><%= link_to 'Update', edit_product_path(@product) %></li>
+  <li class="btn "><%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+</ul>
+</div>
+
+
+
+
+

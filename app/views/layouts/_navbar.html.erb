@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default navbar-expand-lg navbar-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><span class="text-white text-capitalize fst-italic">Shop Now</span></a>
+    <%= link_to "Shop Now ", root_path, class: 'navbar-brand'%>
     <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon "></span>
     </button>
@@ -9,7 +9,9 @@
         <% if user_signed_in? %>
           <li class="btn text-white">Home</li>
           <li class="btn text-white">About</li>
+          <li class="btn"><%=link_to "New Product", new_product_path %></li>
         <% else %>
+          <li class="btn"><%=link_to "New Product", new_product_path %></li>
           <li class="btn "><%= link_to "Sign Up" , new_user_registration_path %> </li>
           <li class="btn"><%= link_to "Sign In", new_user_session_path %></li>
         <%end %>
