@@ -13,6 +13,118 @@
  *= require_tree .
  *= require_self
  */
+//@import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500);
+//
+//@mixin background-tile {
+//  box-sizing: border-box;
+//  background-color: #fff;
+//  border-radius: 5px;
+//  box-shadow: 3px 3px 5px 6px #ccc;
+//  padding: 1.5em 1.25em;
+//}
+//
+//
+///* General styles */
+//
+//body {
+//  background-color: #f5f5f5;
+//  font-family: 'Lora', serif;
+//}
+//
+//h1, h2, h3, h4, h5, h6 {
+//  font-family: 'Ubuntu', sans-serif;
+//  font-weight: 300;
+//}
+//
+//p.alert, p.notice {
+//  margin: 0;
+//}
+//.navbar {
+//  font-family: 'Muli', sans-serif;
+//  text-transform: uppercase;
+//}
+//.navbar-default {
+//
+//  padding-top: 5px;
+//  padding-bottom: 5px;
+//  background-color: #ee5253;
+//
+//  .navbar-nav > li > a {
+//    color: rgb(255, 255, 255);
+//    text-decoration: none;
+//  }
+//
+//  .navbar-link {
+//    color: #222;
+//  }
+//
+//  .navbar-brand  {
+//    color: #ffffff;
+//    letter-spacing: 1.4px;
+//  }
+//  .navbar-brand:hover{
+//    color: white;
+//  }
+//
+//}
+//.dropdown-menu > li > a {
+//  text-decoration: none;
+//  color: #f7fbff;
+////}
+//.dropdown-menu{
+//  background-color: #ee5253;
+//}
+//.navbar-toggler{
+//color: gainsboro ;
+//}
+//.show-img{
+//  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+//}
+//.show-container{
+//  background-color: #F7F7F7;
+//  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+//
+//.show-heading {
+//  background-color: #F7F7F7;
+//  color: gray;
+//  padding: 10px;
+//  border-left: 5px solid #ee5253;
+//  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+//
+//}
+//  .product-desc{
+//   padding: 10px;
+//   letter-spacing: inherit;
+//    font-family: "JetBrains Mono Light";
+//    font-style: initial;
+//    font-size: 17px;
+//    word-spacing: 1px;
+//    letter-spacing: 0.25px;
+//  }
+//}
+//.product{
+//    height: 350px;
+//    width: 250px;
+//    margin-bottom: 40px;
+//  box-shadow: 3px 3px 5px 6px #ccc;
+//  border-radius: 5px;
+//  padding: 0.75em 0.75em;
+//  //@include background-tile;
+//}
+//.show-btn-div {
+//  margin-top: 20px;
+//}
+//
+//.show-btn-div > li > a {
+//  text-decoration: none;
+//
+//}
+//.show-btn-div > li{
+//  border: 0.5px solid gainsboro;
+//}
+//.show-btn-div > li:hover{
+//  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+//}
 @import url(http://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,500);
 
 @mixin background-tile {
@@ -27,7 +139,7 @@
 /* General styles */
 
 body {
-  background-color: #f5f5f5;
+  background-color:ghostwhite;
   font-family: 'Lora', serif;
 }
 
@@ -39,90 +151,191 @@ h1, h2, h3, h4, h5, h6 {
 p.alert, p.notice {
   margin: 0;
 }
-.navbar {
-  font-family: 'Muli', sans-serif;
-  text-transform: uppercase;
-}
-.navbar-default {
 
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: rgb(75, 101, 132);
+
+/* Navbar/navigation styles */
+
+.navbar {
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 0.5px solid gainsboro;
+  background-color: #ffffff;
+  box-shadow: 2px 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
 
   .navbar-nav > li > a {
-    color: rgb(255, 255, 255);
+    color: #2E2F30;
+    text-decoration: none;
+    &:hover {
+      color: darken(#f1c40f, 5%);
+      transition: 0.5s;
+    }
+  }
+
+    .navbar-brand {
+      color: #000;
+      letter-spacing: 1.4px;
+      font-family: "Liberation Sans Narrow";
+    }
+
+  .dropdown-menu > li > a {
+    color: #000;
     text-decoration: none;
   }
-
-  .navbar-link {
-    color: #222;
+ .dropdown-menu > li > a:focus{
+   color: #f1c40f;
+ }
+  .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+    background-color: darken(#f1c40f, 5%);
+    color: #fff;
   }
 
-  .navbar-brand  {
-    color: #ffffff;
-    letter-spacing: 1.4px;
-  }
-  .navbar-brand:hover{
-    color: white;
-  }
+.dropdown-menu > .active > a {
+  background-color: #f1c40f;
+  color: #fff;
+}
 
-}
-.dropdown-menu > li > a {
-  text-decoration: none;
-  color: #f7fbff;
-}
-.dropdown-menu{
-  background-color: rgb(75, 101, 132);
-}
-.navbar-toggler{
-  background: white;
 
-}
-.show-img{
-  box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-.show-container{
-  background-color: #F7F7F7;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+/* Button/link styles */
 
-.show-heading {
-  background-color: #F7F7F7;
-  color: gray;
-  padding: 10px;
-  border-left: 5px solid gray;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-
-}
-  .product-desc{
-   padding: 10px;
-   letter-spacing: inherit;
-    font-family: "JetBrains Mono Light";
-    font-style: initial;
-    font-size: 17px;
-    word-spacing: 1px;
-    letter-spacing: 0.25px;
-  }
-}
-.product{
-    height: 350px;
-    width: 250px;
-    margin-bottom: 40px;
-  box-shadow: 3px 3px 5px 6px #ccc;
+.btn-custom {
+  color: darken(#f1c40f, 5%);
+  background-color: #fff;
+  border: 1px solid darken(#f1c40f, 5%);
+  padding: 8px 20px;
   border-radius: 5px;
-  padding: 0.75em 0.75em;
-  //@include background-tile;
+  font-family: 'Ubuntu', sans-serif;
+  &:hover {
+    text-decoration: none;
+    background-color: darken(#f1c40f, 5%);
+    color: #fff;
+    transition: 0.5s;
+  }
 }
-.show-btn-div {
+
+.btn-custom2 {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #222;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-family: 'Ubuntu', sans-serif;
+  &:hover {
+    text-decoration: none;
+    background-color: #333;
+    color: #fff;
+    transition: 0.5s;
+  }
+}
+
+.links {
+
+  .btn-custom {
+    padding: 3px 10px;
+    font-weight: 300;
+  }
+
+}
+
+
+/* Book styles */
+
+.product {
+  height: 350px;
+  width: 250px;
+  margin-bottom: 40px;
+  @include background-tile;
+}
+
+.product-show {
+  height: 475px;
+  width: 325px;
+  @include background-tile;
+}
+
+.product-info {
+  @include background-tile;
+
+  .product-title {
+    margin-top: 0;
+    font-size: 2em;
+  }
+
+  .product-desc {
+    font-size: 1.05em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+}
+
+
+/* current-category styles */
+
+
+
+
+
+
+/* New Book Form styles */
+
+.new-product-form {
+  @include background-tile;
   margin-top: 20px;
+
+  h1 {
+    margin-top: 0;
+  }
+
+  #category_id {
+    margin-bottom: 10px;
+  }
+
+  #book_book_img {
+    margin-bottom: 10px;
+  }
+
 }
 
-.show-btn-div > li > a {
-  text-decoration: none;
+
+/* Edit Book Form styles */
+
+.edit-product-form {
+
+  @include background-tile;
+  margin-top: 20px;
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+/* Signup/Login form styles */
+
+.signup-form {
+  @include background-tile;
+  margin-top: 20px;
+
+  h2 {
+    margin-top: 0;
+  }
 
 }
-.show-btn-div > li{
-  border: 0.5px solid gainsboro;
-}
-.show-btn-div > li:hover{
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+.login-form {
+  @include background-tile;
+
+  h2 {
+    margin-top: 0;
+  }
+
 }
