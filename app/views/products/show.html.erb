@@ -12,10 +12,21 @@
     <h4 class="product-title"><%= @product.name %></h4>
     <p class="product-desc"><%= @product.description %></p>
     </div>
+
+      <div class="card col-3 mt-3 " style="width: 18rem; background-color: white;border-left:2px solid orange;border-top: 2px solid orange">
+        <div class="card-body">
+          <h1 class="card-title text-center  font-monospace" style="font-size: 25px;">Buy Now</h1>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+         <div class="text-center"> <button class="btn btn-warning ">Add to Cart</button></div>
+
+        </div>
+      </div>
+
   </div>
+
 </div>
 
-<div class="links btn-group">
+<div class="links btn-group ml-1">
 <ul>
   <li class="btn "><%= link_to 'Back', products_path, class: "btn btn-custom" %></li>
   <% if user_signed_in? %>
